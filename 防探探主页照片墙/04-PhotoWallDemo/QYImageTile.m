@@ -76,3 +76,8 @@
 }
 
 @end
+
+
+@implementation QYPlaceholderImageView
+
+@end

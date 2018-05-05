@@ -20,7 +20,11 @@
 
 //添加瓦片
 -(void)addSubImageTile{
-    for (int i = 1; i < 7; i++) {
+    
+    // 假设前4个有图片， 后2个没有图片，使用占位图 QYPlaceholderImageView
+    // 占位图为：cat6.jpg
+    
+    for (int i = 1; i < 5; i++) {
         QYImageTile *imageTile = [[QYImageTile alloc] init];
         [self addSubview:imageTile];
         
@@ -30,6 +34,16 @@
         
         UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
         [imageTile addGestureRecognizer:pan];
+    }
+    
+    
+    for (int i = 5; i < 7; i++) {
+        QYPlaceholderImageView *imageTile = [[QYPlaceholderImageView alloc] init];
+        [self addSubview:imageTile];
+        
+        imageTile.tag = imageTile.tileIndex = 100 + i;
+        NSString *tileName = [NSString stringWithFormat:@"cat%d.jpg",6];
+        imageTile.image = [UIImage imageNamed:tileName];
     }
 }
 
@@ -74,6 +88,10 @@
             if (findTag > panView.tag) {
                 //当findTag > panView.tag,让[(panView.tag + 1) - findTag]区间内的所有的视图的tag值和tileIndex都 减1
                 [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    //如果是占位图，返回
+                    if ([obj isKindOfClass:[QYPlaceholderImageView class]]) {
+                        return ;
+                    }
                     if (obj.tag > panView.tag && obj.tag <= findTag) {
                         QYImageTile *tile = (QYImageTile *)obj;
                         tile.tag = tile.tileIndex -= 1;
@@ -82,6 +100,10 @@
             }else{
                 //当findTag < panView.tag,rang[findTag - (panView.tag - 1)]区间内的所有的视图的tag值和tileIndex 都 加1
                 [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    //如果是占位图，返回
+                    if ([obj isKindOfClass:[QYPlaceholderImageView class]]) {
+                        return ;
+                    }
                     if (obj.tag >= findTag && obj.tag < panView.tag) {
                         QYImageTile *tile = (QYImageTile *)obj;
                         tile.tag = tile.tileIndex += 1;
@@ -113,6 +135,10 @@
     __block NSInteger findTag = -1;
     
     [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        //如果是占位图，返回
+        if ([obj isKindOfClass:[QYPlaceholderImageView class]]) {
+            return ;
+        }
         //判断obj不是view
         if (obj != panView) {
             if (CGRectContainsPoint(obj.frame, point)) {

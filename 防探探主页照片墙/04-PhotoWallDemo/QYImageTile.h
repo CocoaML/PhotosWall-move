@@ -11,3 +11,9 @@
 @interface QYImageTile : UIImageView
 @property (nonatomic) NSInteger tileIndex;
 @end
+
+// 占位图
+@interface QYPlaceholderImageView : QYImageTile
+
+@end
+
