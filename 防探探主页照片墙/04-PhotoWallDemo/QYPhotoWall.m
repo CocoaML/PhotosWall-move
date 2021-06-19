@@ -22,7 +22,7 @@
 -(void)addSubImageTile{
     
     // 假设前4个有图片， 后2个没有图片，使用占位图 QYPlaceholderImageView
-    // 占位图为：cat6.jpg
+    // 占位图为：add.jpg
     
     for (int i = 1; i < 5; i++) {
         QYImageTile *imageTile = [[QYImageTile alloc] init];
@@ -42,8 +42,7 @@
         [self addSubview:imageTile];
         
         imageTile.tag = imageTile.tileIndex = 100 + i;
-        NSString *tileName = [NSString stringWithFormat:@"cat%d.jpg",6];
-        imageTile.image = [UIImage imageNamed:tileName];
+        imageTile.image = [UIImage imageNamed:@"add"];
     }
 }
 
