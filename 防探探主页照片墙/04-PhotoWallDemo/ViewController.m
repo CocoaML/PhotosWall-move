@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "QYPhotoWall.h"
 #import "Common.h"
+#import "Masonry.h"
+
 @interface ViewController ()
 @property (nonatomic, strong) QYPhotoWall *photoWall;
 @end
@@ -30,16 +32,23 @@
     //添加照片墙
     [self.view addSubview:self.photoWall];
     
-    NSDictionary *views = NSDictionaryOfVariableBindings(self.view,_photoWall);
+    // 使用 Masonry 布局
+    [self.photoWall mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(0);
+        make.top.mas_equalTo(0);
+        make.size.mas_equalTo(CGSizeMake(QYScreenW, QYScreenW));
+    }];
     
-    NSNumber *wNum = @(QYScreenW);
-    
-    NSDictionary *metrics = NSDictionaryOfVariableBindings(wNum);
-    
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_photoWall]|" options:0 metrics:nil views:views]];
-    
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[_photoWall(wNum)]" options:0 metrics:metrics views:views]];
-    // Do any additional setup after loading the view, typically from a nib.
+    // 使用系统布局
+//    NSDictionary *views = NSDictionaryOfVariableBindings(self.view,_photoWall);
+//
+//    NSNumber *wNum = @(QYScreenW);
+//
+//    NSDictionary *metrics = NSDictionaryOfVariableBindings(wNum);
+//
+//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_photoWall]|" options:0 metrics:nil views:views]];
+//
+//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[_photoWall(wNum)]" options:0 metrics:metrics views:views]];
 }
 
 - (void)didReceiveMemoryWarning {
