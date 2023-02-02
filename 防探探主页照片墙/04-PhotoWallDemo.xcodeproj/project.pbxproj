@@ -14,7 +14,6 @@
 		CC0C6DA91CF03D080084CBF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC0C6DA81CF03D080084CBF9 /* Assets.xcassets */; };
 		CC0C6DAC1CF03D080084CBF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0C6DAA1CF03D080084CBF9 /* LaunchScreen.storyboard */; };
 		CC0C6DB51CF03D500084CBF9 /* QYImageTile.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0C6DB41CF03D500084CBF9 /* QYImageTile.m */; };
-		CC0C6DD11CF03E170084CBF9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC0C6DB71CF03E170084CBF9 /* Info.plist */; };
 		CC0C6DD21CF03E170084CBF9 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0C6DB91CF03E170084CBF9 /* MASCompositeConstraint.m */; };
 		CC0C6DD31CF03E170084CBF9 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0C6DBC1CF03E170084CBF9 /* MASConstraint.m */; };
 		CC0C6DD41CF03E170084CBF9 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0C6DBE1CF03E170084CBF9 /* MASConstraintMaker.m */; };
@@ -221,7 +220,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC0C6DD11CF03E170084CBF9 /* Info.plist in Resources */,
 				CC0C6DAC1CF03D080084CBF9 /* LaunchScreen.storyboard in Resources */,
 				CC0C6DA91CF03D080084CBF9 /* Assets.xcassets in Resources */,
 				CC0C6DA71CF03D080084CBF9 /* Main.storyboard in Resources */,
