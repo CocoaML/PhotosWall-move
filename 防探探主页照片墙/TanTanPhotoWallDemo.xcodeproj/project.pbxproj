@@ -28,7 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CC0C6D991CF03D080084CBF9 /* 04-PhotoWallDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "04-PhotoWallDemo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC0C6D991CF03D080084CBF9 /* TanTanPhotoWallDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TanTanPhotoWallDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0C6D9D1CF03D080084CBF9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC0C6D9F1CF03D080084CBF9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC0C6DA01CF03D080084CBF9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		CC0C6D901CF03D080084CBF9 = {
 			isa = PBXGroup;
 			children = (
-				CC0C6D9B1CF03D080084CBF9 /* 04-PhotoWallDemo */,
+				CC0C6D9B1CF03D080084CBF9 /* TanTanPhotoWallDemo */,
 				CC0C6D9A1CF03D080084CBF9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,12 +93,12 @@
 		CC0C6D9A1CF03D080084CBF9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CC0C6D991CF03D080084CBF9 /* 04-PhotoWallDemo.app */,
+				CC0C6D991CF03D080084CBF9 /* TanTanPhotoWallDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CC0C6D9B1CF03D080084CBF9 /* 04-PhotoWallDemo */ = {
+		CC0C6D9B1CF03D080084CBF9 /* TanTanPhotoWallDemo */ = {
 			isa = PBXGroup;
 			children = (
 				CC0C6DB61CF03E170084CBF9 /* Masonry */,
@@ -117,7 +117,7 @@
 				CC0C6DAD1CF03D080084CBF9 /* Info.plist */,
 				CC0C6D9C1CF03D080084CBF9 /* Supporting Files */,
 			);
-			path = "04-PhotoWallDemo";
+			path = TanTanPhotoWallDemo;
 			sourceTree = "<group>";
 		};
 		CC0C6D9C1CF03D080084CBF9 /* Supporting Files */ = {
@@ -164,9 +164,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CC0C6D981CF03D080084CBF9 /* 04-PhotoWallDemo */ = {
+		CC0C6D981CF03D080084CBF9 /* TanTanPhotoWallDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC0C6DB01CF03D080084CBF9 /* Build configuration list for PBXNativeTarget "04-PhotoWallDemo" */;
+			buildConfigurationList = CC0C6DB01CF03D080084CBF9 /* Build configuration list for PBXNativeTarget "TanTanPhotoWallDemo" */;
 			buildPhases = (
 				CC0C6D951CF03D080084CBF9 /* Sources */,
 				CC0C6D961CF03D080084CBF9 /* Frameworks */,
@@ -176,9 +176,9 @@
 			);
 			dependencies = (
 			);
-			name = "04-PhotoWallDemo";
+			name = TanTanPhotoWallDemo;
 			productName = "04-PhotoWallDemo";
-			productReference = CC0C6D991CF03D080084CBF9 /* 04-PhotoWallDemo.app */;
+			productReference = CC0C6D991CF03D080084CBF9 /* TanTanPhotoWallDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -196,7 +196,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CC0C6D941CF03D080084CBF9 /* Build configuration list for PBXProject "04-PhotoWallDemo" */;
+			buildConfigurationList = CC0C6D941CF03D080084CBF9 /* Build configuration list for PBXProject "TanTanPhotoWallDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -210,7 +210,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CC0C6D981CF03D080084CBF9 /* 04-PhotoWallDemo */,
+				CC0C6D981CF03D080084CBF9 /* TanTanPhotoWallDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -358,11 +358,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZNMUAN4T83;
-				INFOPLIST_FILE = "04-PhotoWallDemo/Info.plist";
+				INFOPLIST_FILE = TanTanPhotoWallDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Qingyun.-4-PhotoWallDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -371,18 +375,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZNMUAN4T83;
-				INFOPLIST_FILE = "04-PhotoWallDemo/Info.plist";
+				INFOPLIST_FILE = TanTanPhotoWallDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Qingyun.-4-PhotoWallDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CC0C6D941CF03D080084CBF9 /* Build configuration list for PBXProject "04-PhotoWallDemo" */ = {
+		CC0C6D941CF03D080084CBF9 /* Build configuration list for PBXProject "TanTanPhotoWallDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC0C6DAE1CF03D080084CBF9 /* Debug */,
@@ -391,7 +399,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC0C6DB01CF03D080084CBF9 /* Build configuration list for PBXNativeTarget "04-PhotoWallDemo" */ = {
+		CC0C6DB01CF03D080084CBF9 /* Build configuration list for PBXNativeTarget "TanTanPhotoWallDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC0C6DB11CF03D080084CBF9 /* Debug */,
